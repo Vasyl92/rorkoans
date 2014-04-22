@@ -18,3 +18,12 @@ describe "Rails Structure" do
     end
   end
 end
+# тест 2 встановити root(коренева сторінка) pages/index.html.erb і видалити public/index.html
+describe "Rails Structure" do
+
+  describe "Please write root_path" do
+    it 'You should write root_path to pages/index and remove public/index.html' do
+    	visit root_path
+    end
+  end
+end
