@@ -1,0 +1,22 @@
+
+Rails structure
+  PagesController
+    You should Create Controller Pages with views index about info !!! (FAILED - 1)
+
+Failures:
+
+  1) Rails structure PagesController You should Create Controller Pages with views index about info !!!
+     Failure/Error: expect(PagesController).to be
+     NameError:
+       uninitialized constant PagesController
+     # ./spec/requests/main_tests_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+Finished in 0.04847 seconds
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/requests/main_tests_spec.rb:7 # Rails structure PagesController You should Create Controller Pages with views index about info !!!
+
+Randomized with seed 50069
+
