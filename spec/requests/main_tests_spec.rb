@@ -27,3 +27,13 @@ describe "Rails Structure" do
     end
   end
 end
+# тест 3  Написати шлях під іменем about_path до сторінки about/index.html.erb 
+describe "Rails Structure" do
+
+  describe "Please write about_path" do
+    it "You should write match to view pages/about use name about_path" do
+      visit about_path
+    end
+  end
+end
+
