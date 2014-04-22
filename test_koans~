@@ -1,0 +1,16 @@
+#!/bin/bash
+clear
+echo "Hi, $USER"
+rspec spec/requests/main_tests_spec.rb --format progress --format documentation --out rspec.txt
+INFO="$(tail -4 "rspec.txt")"
+VALUE=" 0 failures"
+TESNUMBER=${INFO:0:3}
+echo
+if [[ $INFO =~ .*$VALUE.* ]];
+then
+echo  "You have passed test number $TESNUMBER"
+else
+echo "YOU DONT PASSED all tests please try again"
+#exit 1
+fi
+echo
