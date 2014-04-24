@@ -47,4 +47,18 @@ describe "Rails Structure" do
     end
   end
 end
+# тест 5  Створити гіперпосилання link 'About' to about_path розмістити pages/index.html.erb "
+describe "View" do
+
+  describe "Link creating (root page active)" do
+
+    it "You should  create link 'About' to about_path " do
+        visit root_path
+        expect(page).to have_link('About')
+        click_link('About') 
+        expect(page).to have_content('Pages#about')
+        page.status_code.should be 200 
+      end
+  end
+end
 

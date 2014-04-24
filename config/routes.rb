@@ -9,8 +9,9 @@ Rorkoans::Application.routes.draw do
 
 #pages match
   match '/about', :to =>'pages#about'
-#___________________PLEASE WRITE OTHER MATHES___________
- 
+  match '/info', :to =>'pages#info'
+  match '/contact', :to =>'pages#contact'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
