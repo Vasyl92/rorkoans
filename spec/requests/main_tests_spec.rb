@@ -61,4 +61,28 @@ describe "View" do
       end
   end
 end
+#------------------------------------------------5-----------------------------------------------------------------------
+# тест 6  Створити гіперпосилання link 'Index' 'Info' 'Contact' to root_path, info_path, contact_path розмістити pages/index.html.erb "
+describe "View" do
 
+  describe "Link creating (root page active)" do
+
+    it "You should  create link 'Index','Info','Contact' to about_path,info_path,contact_path " do
+        visit root_path
+        page.status_code.should be 200 
+        expect(page).to have_link('Index')
+        click_link('Index') 
+        expect(page).to have_content('Pages#index')
+        page.status_code.should be 200 
+        expect(page).to have_link('Info')
+        click_link('Info') 
+        expect(page).to have_content('Pages#info')
+        page.status_code.should be 200 
+        visit root_path
+        expect(page).to have_link('Contact')
+        click_link('Contact') 
+        expect(page).to have_content('Pages#contact')
+        page.status_code.should be 200 
+      end
+  end
+end
