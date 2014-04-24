@@ -7,6 +7,10 @@ Rorkoans::Application.routes.draw do
 
   get "pages/contact"
 
+#pages match
+  match '/about', :to =>'pages#about'
+#___________________PLEASE WRITE OTHER MATHES___________
+ 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

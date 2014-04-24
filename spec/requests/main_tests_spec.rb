@@ -36,4 +36,15 @@ describe "Rails Structure" do
     end
   end
 end
+# тест 4  Написати шлях під іменем contact_path,info_path до сторінки info/index.html.erb contact/index.html.erb 
+describe "Rails Structure" do
+
+  describe "Please write contact_path,info_path" do
+    it "You should write match to view info/index.html.erb contact/index.html.erb use contact_path,info_path" do
+      visit info_path
+      visit contact_path
+      page.status_code.should be 200
+    end
+  end
+end
 
