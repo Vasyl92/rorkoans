@@ -115,4 +115,13 @@ describe "View" do
          end
       end
 end
-
+# тест10 Змініть назву заголовку на RoRkoans | Index в root
+describe "View" do
+      describe "Change title" do
+        it "should have the right title RoRkoans | Index in pages#index" do
+            visit root_path
+            expect(page).to have_title('RoRkoans | Index')
+         end
+      end
+end
+#------------------------------------------------10-----------------------------------------------------------------------
