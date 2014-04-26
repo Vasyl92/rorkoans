@@ -86,3 +86,14 @@ describe "View" do
       end
   end
 end
+# тест7 Створити файл _menu.html.erb в ayouts/partials і перемістити всі посилання із кореневої сторінки. Підключити partial application.html.erb
+describe "View" do
+
+  describe "Use partial for links" do
+
+    it "You should create create file(_menu.html.erb) in layouts/partials containing all links and inlude partial in application.html.erb " do
+        get "pages/index"
+        response.should render_template(:partial => "layouts/partials/_menu")
+      end
+  end
+end
