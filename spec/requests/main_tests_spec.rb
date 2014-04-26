@@ -97,3 +97,13 @@ describe "View" do
       end
   end
 end
+# тест8 Підключення файлу стилів my.css і використати стиль zagolovok для всіх гіперпосиланнь в _menu.html.erb
+describe "View" do
+      describe "Include CSS-style file" do
+        it "You should  create include my_css.css style and add use style zagolovok for all links in _menu.html.erb " do
+         visit root_path
+         expect(page).to have_selector('zagolovok')
+         end
+      end
+end
+
