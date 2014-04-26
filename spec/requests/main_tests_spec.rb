@@ -102,7 +102,16 @@ describe "View" do
       describe "Include CSS-style file" do
         it "You should  create include my_css.css style and add use style zagolovok for all links in _menu.html.erb " do
          visit root_path
-         expect(page).to have_selector('zagolovok')
+         expect(page).to have_selector('div.zagolovok')
+         end
+      end
+end
+# тест9 Підключення div#top_menu  для всіх гіперпосиланнь в _menu.html.erb
+describe "View" do
+      describe "Include div#top_menu" do
+        it "You should  put content of _menu.html.erb into div#top_menu" do
+         visit root_path
+         expect(page).to have_selector('div#top_menu')
          end
       end
 end
