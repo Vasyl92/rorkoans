@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
-gem 'sqlite3'
 
 gem "rspec", "~> 2.14.1"
 

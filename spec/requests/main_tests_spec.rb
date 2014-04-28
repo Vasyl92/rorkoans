@@ -134,3 +134,11 @@ describe "View" do
     end
   end
 end
+# тест12 Створення моделі User, generate model User name:string email:string and run bundle exec rake db:test:prepare
+describe "Model" do
+      describe "Models generation" do
+          it "Generate model User name:string email:string " do
+          @user = User.new(name: "Example User", email: "user@example.com")
+    end
+  end
+end
