@@ -142,3 +142,14 @@ describe "Model" do
     end
   end
 end
+
+# тест13 Створення валідаторів наявності на поля name:string email:string
+describe "Model" do
+      describe "Validators" do
+          it "You should add validators of presence: true for name" do
+          @user = User.new(name: "Example User", email: "user@example.com")
+          @user.name = " "
+          @user.should_not be_valid
+    end
+  end
+end
