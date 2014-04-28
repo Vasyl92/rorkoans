@@ -125,3 +125,12 @@ describe "View" do
       end
 end
 #------------------------------------------------10-----------------------------------------------------------------------
+# тест11 Витріть вміст контенту pages#about і розмістіть там зображення
+describe "View" do
+      describe "Work with image" do
+          it " You should use Rails.png to put an image in the view " do
+          visit about_path
+          expect(page).to have_selector("img", :count => 1)
+    end
+  end
+end
