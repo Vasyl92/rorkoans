@@ -153,3 +153,17 @@ describe "Model" do
     end
   end
 end
+# тест14 Створення валідаторів довжини не більше 51 символа для поля name
+describe "Model" do
+
+  describe "Validators" do
+
+        before { @user = User.new(name: "Example User", email: "user@example.com")}
+        before { @user.name = "a" * 51 }
+        subject { @user }
+
+          it "You should add length validator 51 symbols for field name" do
+          should_not be_valid
+        end
+    end
+end
