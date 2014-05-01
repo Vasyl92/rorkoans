@@ -206,6 +206,22 @@ describe "Model" do
         end
     end
 end
+#Тест №17 Валидация чутливості до регістру поля email
+describe "Model" do
+    before { @user = User.new(name: "Example User", email: "user@example.com")}
+        subject { @user }
+  describe "Validators" do
+      before do
+        user_with_same_email = @user.dup
+            user_with_same_email.email = @user.email.upcase
+            user_with_same_email.save
+      end
+           it "You should add validators of case_sensitive for field email" do
+          should_not be_valid
+        end
+    end
+end
+
 
 
 
