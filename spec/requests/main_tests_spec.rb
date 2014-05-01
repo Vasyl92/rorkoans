@@ -191,3 +191,22 @@ describe "Model" do
     end
   end
 end
+#------------------------------------------------15-----------------------------------------------------------------------
+# тест16 Валидация унікальності щоб не збереглися однакові користувачі
+describe "Model" do
+    before { @user = User.new(name: "Example User", email: "user@example.com")}
+        subject { @user }
+    describe "Validators" do
+      before do
+        user_with_same_email = @user.dup
+            user_with_same_email.save
+      end
+          it "You should add validators of uniqueness for field name" do
+          should_not be_valid
+        end
+    end
+end
+
+
+
+
