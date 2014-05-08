@@ -221,7 +221,6 @@ describe "Model" do
         end
     end
 end
-
 #Тест №18 Добавлення поля password для моделі User
 
 describe "Model" do
@@ -241,5 +240,21 @@ describe "Model" do
   end
 end
 
+#Тест №19 генерування контролера Users із представленнями registration log_in profile all
 
+describe "Controller" do
 
+  describe "Controller creating" do
+    it 'You should Create Controller Users with views registration login profile all!!!' do
+      expect(UsersController).to be
+      get 'users/registration'
+      response.should be_success
+      get 'users/login'
+      response.should be_success
+      get 'users/profile'
+      response.should be_success
+      get 'users/all'
+      response.should be_success
+    end
+  end
+end
