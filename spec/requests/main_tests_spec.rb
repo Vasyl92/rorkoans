@@ -274,3 +274,16 @@ describe "View" do
     end
   end
 end
+
+#------------------------------------------------20-----------------------------------------------------------------------
+
+#21 Підключення footer in layouts/application.html.erb
+
+describe "View" do
+      describe "Include div#footer" do
+        it "You should  inlude div#footer in layouts/application.html.erb" do
+         visit root_path
+         expect(page).to have_selector('div#footer')
+         end
+      end
+end
