@@ -258,3 +258,19 @@ describe "Controller" do
     end
   end
 end
+
+#20 Створення кнопок Log in i Sign іn поверх них тексти Registration Authorization в форматі h2 в кореневій сторінці
+
+describe "View" do
+
+  before { visit root_path }
+  subject { page }
+  describe "Button creating" do
+    it  'You should create buttons Log in and Sign in wit text Registration and Authorization in root_path' do
+     should have_selector('h2',    text: 'Registration') 
+     should have_link('Log in') 
+     should have_selector('h2',    text: 'Authorization') 
+     should have_link('Sign in') 
+    end
+  end
+end

@@ -1,4 +1,12 @@
 Rorkoans::Application.routes.draw do
+  get "users/registration"
+
+  get "users/login"
+
+  get "users/profile"
+
+  get "users/all"
+
   get "pages/index"
 
   get "pages/about"
