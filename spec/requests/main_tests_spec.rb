@@ -222,7 +222,24 @@ describe "Model" do
     end
 end
 
+#Тест №18 Добавлення поля password для моделі User
 
+describe "Model" do
+
+      before do
+        @user = User.new(name: "Example User", email: "user@example.com")
+      end
+
+      subject { @user }
+
+      describe "Adding field to the model" do
+          it "You should add field password to the model User " do
+          should respond_to(:name)
+          should respond_to(:email)
+          should respond_to(:password)
+    end
+  end
+end
 
 
 
