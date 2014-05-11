@@ -259,7 +259,7 @@ describe "Controller" do
   end
 end
 
-#20 Створення кнопок Log in i Sign іn поверх них тексти Registration Authorization в форматі h2 в кореневій сторінці
+#Тест №20 Створення кнопок Log in i Sign іn поверх них тексти Registration Authorization в форматі h2 в кореневій сторінці
 
 describe "View" do
 
@@ -276,8 +276,7 @@ describe "View" do
 end
 
 #------------------------------------------------20-----------------------------------------------------------------------
-
-#21 Підключення footer in layouts/application.html.erb
+#Тест №21 Підключення footer in layouts/application.html.erb
 
 describe "View" do
       describe "Include div#footer" do
@@ -286,4 +285,20 @@ describe "View" do
          expect(page).to have_selector('div#footer')
          end
       end
+end
+
+#Тест №22 Написання маршрута для кнопки Sign up
+
+describe "View" do
+
+describe "Match button(link)" do
+
+    it "You should  match button to page(users/registration) and put there text Registration page" do
+        visit root_path
+        expect(page).to have_link('Log in')
+        click_link('Log in') 
+        expect(page).to have_content('Registration page')
+        page.status_code.should be 200 
+      end
+  end
 end
