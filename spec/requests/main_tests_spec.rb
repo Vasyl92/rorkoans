@@ -318,3 +318,22 @@ describe "View" do
       end
   end
 end
+
+#Тест №24 Збереження користувача створення функції збереження користувача
+
+describe "Controller" do
+  subject { page }
+  describe "Action creating" do
+    before { visit registration_path }
+    let(:submit) { "ok" }
+    describe "" do
+      it "You should write function create in UsersController for saving user" do
+        expect { click_button submit }.not_to change(User, :count)
+        fill_in "Name",         with: "Example User"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: "foobar"
+        expect { click_button submit }.to change(User, :count).by(1)
+      end
+    end
+  end
+end
