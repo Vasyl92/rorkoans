@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def login
+  	@user = User.new
   end
 
   def profile
@@ -14,7 +15,12 @@ class UsersController < ApplicationController
   end
 
  def create
- 	
+ 	@user = User.new(params[:user])    
+    if @user.save
+      redirect_to root_path
+    else
+      render 'users/registration'
+    end
  	
  end
 

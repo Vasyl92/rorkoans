@@ -310,7 +310,7 @@ describe "View" do
   subject { page }
   describe "Registration form" do
 
-    it "You should  fill in registration form(users/registration) witth field name email password and submit ok(use form_for)" do
+    it "You should  fill in registration form(users/registration) with field name email password and submit ok(use form_for)" do
         should have_field("Name")
         should have_field("Email")
         should have_field("Password")
@@ -337,3 +337,20 @@ describe "Controller" do
     end
   end
 end
+
+#Тест №25 Заповнення авторизаційної форми
+
+describe "View" do
+  before { visit login_path }
+  subject { page }
+  describe "Authorization form" do
+
+    it "You should  fill in authorization form(users/authorization) with field email password and submit ok(use form_for)" do
+        should have_field("Email")
+        should have_field("Password")
+        should have_button("ok")
+      end
+  end
+end
+
+#------------------------------------------------25-----------------------------------------------------------------------
