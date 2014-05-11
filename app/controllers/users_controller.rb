@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+
   def registration
+  	@user = User.new
   end
 
   def login
@@ -10,4 +12,9 @@ class UsersController < ApplicationController
 
   def all
   end
+
+ def create
+ 	
+ end
+
 end

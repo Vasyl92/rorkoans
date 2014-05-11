@@ -20,6 +20,12 @@ Rorkoans::Application.routes.draw do
   match '/info', :to =>'pages#info'
   match '/contact', :to =>'pages#contact'
 
+#pages match
+  match '/registration', :to =>'users#registration'
+  match '/profile', :to =>'users#profile'
+  match '/login', :to =>'users#login'
+ # :action
+    match ':controller/:action'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

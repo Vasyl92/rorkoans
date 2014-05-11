@@ -302,3 +302,19 @@ describe "Match button(link)" do
       end
   end
 end
+
+#Тест №23 Заповнення реєстраційної форми
+
+describe "View" do
+  before { visit registration_path }
+  subject { page }
+  describe "Registration form" do
+
+    it "You should  fill in registration form(users/registration) witth field name email password and submit ok(use form_for)" do
+        should have_field("Name")
+        should have_field("Email")
+        should have_field("Password")
+        should have_button("ok")
+      end
+  end
+end
