@@ -287,7 +287,7 @@ describe "View" do
       end
 end
 
-#Тест №22 Написання маршрута для кнопки Sign up
+#Тест №22 Написання маршрута для кнопки Log in
 
 describe "View" do
 
@@ -354,3 +354,18 @@ describe "View" do
 end
 
 #------------------------------------------------25-----------------------------------------------------------------------
+#Тест №26 Написання маршрута для кнопки Sign in
+
+describe "View" do
+
+describe "Match button(link)" do
+
+    it "You should  match button to page(users/login) and put there text Authorization page" do
+        visit root_path
+        expect(page).to have_link('Sign in')
+        click_link('Sign in') 
+        expect(page).to have_content('Authorization page')
+        page.status_code.should be 200 
+      end
+  end
+end
