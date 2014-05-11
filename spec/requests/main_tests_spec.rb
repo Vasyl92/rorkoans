@@ -369,3 +369,20 @@ describe "Match button(link)" do
       end
   end
 end
+
+#Тест №27 Створення повідомленнь помилки реєстрації
+
+describe "Controller" do
+  subject { page }
+  describe "Error messages" do
+    before { visit registration_path }
+    let(:submit) { "ok" }
+    describe "" do
+      it "You should  render registration form and write error if user didnt save" do
+        expect { click_button submit }.not_to change(User, :count)
+        click_button submit
+        should have_content("error")
+      end
+    end
+  end
+end
